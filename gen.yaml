@@ -1,0 +1,16 @@
+configVersion: 1.0.0
+generation:
+  comments:
+    disableComments: false
+    omitDescriptionIfSummaryPresent: false
+  baseServerURL: ""
+  repoURL: https://github.com/speakeasy-sdks/Test_Bolt_API.git
+  sdkClassName: TestBolt
+  singleTagPerOp: false
+  tagNamespacingDisabled: false
+typescript:
+  version: 0.0.1
+  author: Steve-Test
+  clientServerStatusCodesAsErrors: true
+  maxMethodParams: 0
+  packageName: XwangTestTypeScript
