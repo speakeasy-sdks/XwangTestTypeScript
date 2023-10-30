@@ -9,6 +9,7 @@ generation:
     disableComments: false
     omitDescriptionIfSummaryPresent: false
   baseServerURL: ""
+  flattenGlobalSecurity: true
   repoURL: https://github.com/speakeasy-sdks/XwangTestTypeScript.git
   sdkClassName: TestBolt
   singleTagPerOp: false
