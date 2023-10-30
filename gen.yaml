@@ -1,9 +1,9 @@
 configVersion: 1.0.0
 management:
-  docChecksum: f257fd6eb6f561d83126d42092cd2506
+  docChecksum: d42747a5bd3aa0553492d9e771307e46
   docVersion: 3.0.1
-  speakeasyVersion: 1.108.1
-  generationVersion: 2.172.4
+  speakeasyVersion: 1.109.0
+  generationVersion: 2.173.0
 generation:
   comments:
     disableComments: false
@@ -24,7 +24,7 @@ features:
     methodSecurity: 2.82.0
     nameOverrides: 2.81.1
 typescript:
-  version: 0.1.0
+  version: 0.1.1
   author: Steve-Test
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true

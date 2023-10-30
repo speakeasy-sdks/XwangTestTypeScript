@@ -15,15 +15,15 @@ It has been generated successfully based on your OpenAPI spec. However, it is no
 - [ ] 🎁 Publish your SDK to package managers by [configuring automatic publishing](https://www.speakeasyapi.dev/docs/productionize-sdks/publish-sdks)
 - [ ] ✨ When ready to productionize, delete this section from the README
 <!-- Start SDK Installation -->
-# SDK Installation
+## SDK Installation
 
-## NPM
+### NPM
 
 ```bash
 npm add https://github.com/speakeasy-sdks/XwangTestTypeScript
 ```
 
-## Yarn
+### Yarn
 
 ```bash
 yarn add https://github.com/speakeasy-sdks/XwangTestTypeScript
@@ -32,8 +32,6 @@ yarn add https://github.com/speakeasy-sdks/XwangTestTypeScript
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
-
-
 ```typescript
 import { TestBolt } from "XwangTestTypeScript";
 import { AddressListingCountryCode } from "XwangTestTypeScript/dist/sdk/models/shared";
@@ -73,10 +71,10 @@ import { AddressListingCountryCode } from "XwangTestTypeScript/dist/sdk/models/s
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-# Available Resources and Operations
+## Available Resources and Operations
 
 
-## [account](docs/sdks/account/README.md)
+### [account](docs/sdks/account/README.md)
 
 * [addAddress](docs/sdks/account/README.md#addaddress) - Add an address
 * [addPaymentMethod](docs/sdks/account/README.md#addpaymentmethod) - Add a payment method to a shopper's Bolt account Wallet.
@@ -87,25 +85,24 @@ import { AddressListingCountryCode } from "XwangTestTypeScript/dist/sdk/models/s
 * [updateAddress](docs/sdks/account/README.md#updateaddress) - Edit an existing address
 
 
-## [payments.guest](docs/sdks/paymentsguest/README.md)
+### [payments.guest](docs/sdks/paymentsguest/README.md)
 
 * [initialize](docs/sdks/paymentsguest/README.md#initialize) - Initialize a Bolt payment for guest shoppers
 * [performAction](docs/sdks/paymentsguest/README.md#performaction) - Perform an irreversible action (e.g. finalize) on a pending guest payment
 * [update](docs/sdks/paymentsguest/README.md#update) - Update an existing guest payment
 
-## [payments.loggedIn](docs/sdks/paymentsloggedin/README.md)
+### [payments.loggedIn](docs/sdks/paymentsloggedin/README.md)
 
 * [initialize](docs/sdks/paymentsloggedin/README.md#initialize) - Initialize a Bolt payment for logged in shoppers
 * [performAction](docs/sdks/paymentsloggedin/README.md#performaction) - Perform an irreversible action (e.g. finalize) on a pending payment
 * [update](docs/sdks/paymentsloggedin/README.md#update) - Update an existing payment
 
-## [testing](docs/sdks/testing/README.md)
+### [testing](docs/sdks/testing/README.md)
 
 * [createAccount](docs/sdks/testing/README.md#createaccount) - Create a test account
-* [createShipmentTracking](docs/sdks/testing/README.md#createshipmenttracking) - Simulate a shipment tracking update
 * [getCreditCard](docs/sdks/testing/README.md#getcreditcard) - Retrieve a test credit card, including its token
 
-## [transactions](docs/sdks/transactions/README.md)
+### [transactions](docs/sdks/transactions/README.md)
 
 * [getDetails](docs/sdks/transactions/README.md#getdetails) - Retrieve transaction details
 * [performAction](docs/sdks/transactions/README.md#performaction) - Perform an irreversible action (e.g. capture, refund, void) on a transaction
@@ -113,8 +110,6 @@ import { AddressListingCountryCode } from "XwangTestTypeScript/dist/sdk/models/s
 <!-- End SDK Available Operations -->
 
 <!-- Start Dev Containers -->
-
-
 
 <!-- End Dev Containers -->
 
@@ -278,8 +273,6 @@ const httpClient = axios.create({
 
 const sdk = new TestBolt({defaultClient: httpClient});
 ```
-
-
 <!-- End Custom HTTP Client -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->

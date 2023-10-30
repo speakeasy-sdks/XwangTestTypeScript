@@ -20,7 +20,6 @@ export * from "./paymentupdaterequest";
 export * from "./profile";
 export * from "./profilecreationdata";
 export * from "./security";
-export * from "./shipmenttrackingupdate";
 export * from "./transaction";
 export * from "./transactionactionrequest";
 export * from "./transactionupdaterequest";
