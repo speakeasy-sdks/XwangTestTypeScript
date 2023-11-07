@@ -1,4 +1,4 @@
-# TransactionUpdateRequestOrderCart
+# TransactionUpdateRequestCart
 
 
 ## Fields

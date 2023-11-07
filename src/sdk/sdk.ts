@@ -3,8 +3,8 @@
  */
 
 import * as utils from "../internal/utils";
+import * as shared from "../sdk/models/shared";
 import { Account } from "./account";
-import * as shared from "./models/shared";
 import { Payments } from "./payments";
 import { Testing } from "./testing";
 import { Transactions } from "./transactions";
@@ -62,9 +62,9 @@ export class SDKConfiguration {
     serverDefaults: any;
     language = "typescript";
     openapiDocVersion = "3.0.1";
-    sdkVersion = "0.1.1";
-    genVersion = "2.173.0";
-    userAgent = "speakeasy-sdk/typescript 0.1.1 2.173.0 3.0.1 XwangTestTypeScript";
+    sdkVersion = "0.2.0";
+    genVersion = "2.181.1";
+    userAgent = "speakeasy-sdk/typescript 0.2.0 2.181.1 3.0.1 XwangTestTypeScript";
     retryConfig?: utils.RetryConfig;
     public constructor(init?: Partial<SDKConfiguration>) {
         Object.assign(this, init);

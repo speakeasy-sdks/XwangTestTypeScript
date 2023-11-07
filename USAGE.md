@@ -3,7 +3,7 @@
 
 ```typescript
 import { TestBolt } from "XwangTestTypeScript";
-import { AddressListingCountryCode } from "XwangTestTypeScript/dist/sdk/models/shared";
+import { CountryCode } from "XwangTestTypeScript/dist/sdk/models/shared";
 
 (async () => {
     const sdk = new TestBolt({
@@ -15,9 +15,9 @@ import { AddressListingCountryCode } from "XwangTestTypeScript/dist/sdk/models/s
 
     const res = await sdk.account.addAddress({
         xPublishableKey: "string",
-        addressListingInput: {
+        addressListing: {
             company: "ACME Corporation",
-            countryCode: AddressListingCountryCode.Us,
+            countryCode: CountryCode.Us,
             email: "alice@example.com",
             firstName: "Alice",
             isDefault: true,

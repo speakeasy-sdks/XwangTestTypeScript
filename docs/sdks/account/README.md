@@ -1,5 +1,5 @@
 # Account
-(*account*)
+(*.account*)
 
 ## Overview
 
@@ -25,7 +25,7 @@ Add an address to the shopper's account
 
 ```typescript
 import { TestBolt } from "XwangTestTypeScript";
-import { AddressListingCountryCode } from "XwangTestTypeScript/dist/sdk/models/shared";
+import { CountryCode } from "XwangTestTypeScript/dist/sdk/models/shared";
 
 (async() => {
   const sdk = new TestBolt({
@@ -37,9 +37,9 @@ import { AddressListingCountryCode } from "XwangTestTypeScript/dist/sdk/models/s
 
   const res = await sdk.account.addAddress({
     xPublishableKey: "string",
-    addressListingInput: {
+    addressListing: {
       company: "ACME Corporation",
-      countryCode: AddressListingCountryCode.Us,
+      countryCode: CountryCode.Us,
       email: "alice@example.com",
       firstName: "Alice",
       isDefault: true,
@@ -215,7 +215,7 @@ Determine whether or not an identifier is associated with an existing Bolt accou
 
 ```typescript
 import { TestBolt } from "XwangTestTypeScript";
-import { IdentifierIdentifierType } from "XwangTestTypeScript/dist/sdk/models/shared";
+import { IdentifierType } from "XwangTestTypeScript/dist/sdk/models/shared";
 
 (async() => {
   const sdk = new TestBolt({
@@ -228,7 +228,7 @@ import { IdentifierIdentifierType } from "XwangTestTypeScript/dist/sdk/models/sh
   const res = await sdk.account.detect({
     xPublishableKey: "string",
     identifier: {
-      identifierType: IdentifierIdentifierType.Email,
+      identifierType: IdentifierType.Email,
       identifierValue: "alice@example.com",
     },
   });
@@ -305,7 +305,7 @@ shipments.
 
 ```typescript
 import { TestBolt } from "XwangTestTypeScript";
-import { AddressListingCountryCode } from "XwangTestTypeScript/dist/sdk/models/shared";
+import { CountryCode } from "XwangTestTypeScript/dist/sdk/models/shared";
 
 (async() => {
   const sdk = new TestBolt({
@@ -317,9 +317,9 @@ import { AddressListingCountryCode } from "XwangTestTypeScript/dist/sdk/models/s
 
   const res = await sdk.account.updateAddress({
     xPublishableKey: "string",
-    addressListingInput: {
+    addressListing: {
       company: "ACME Corporation",
-      countryCode: AddressListingCountryCode.Us,
+      countryCode: CountryCode.Us,
       email: "alice@example.com",
       firstName: "Alice",
       isDefault: true,

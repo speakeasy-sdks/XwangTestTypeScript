@@ -1,5 +1,5 @@
 # Testing
-(*testing*)
+(*.testing*)
 
 ## Overview
 
@@ -22,7 +22,7 @@ Create a Bolt shopper account for testing purposes.
 ```typescript
 import { TestBolt } from "XwangTestTypeScript";
 import { TestingAccountCreateSecurity } from "XwangTestTypeScript/dist/sdk/models/operations";
-import { AccountTestCreationDataEmailState, AccountTestCreationDataPhoneState } from "XwangTestTypeScript/dist/sdk/models/shared";
+import { EmailState, PhoneState } from "XwangTestTypeScript/dist/sdk/models/shared";
 
 (async() => {
   const sdk = new TestBolt();
@@ -30,11 +30,11 @@ const operationSecurity: TestingAccountCreateSecurity = "";
 
   const res = await sdk.testing.createAccount({
     xPublishableKey: "string",
-    accountTestCreationDataInput: {
-      emailState: AccountTestCreationDataEmailState.Unverified,
+    accountTestCreationData: {
+      emailState: EmailState.Unverified,
       hasAddress: true,
       isMigrated: true,
-      phoneState: AccountTestCreationDataPhoneState.Verified,
+      phoneState: PhoneState.Verified,
     },
   }, operationSecurity);
 

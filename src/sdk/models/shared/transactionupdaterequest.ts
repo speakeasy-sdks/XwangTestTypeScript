@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose, Type } from "class-transformer";
 
-export class TransactionUpdateRequestOrderCart extends SpeakeasyBase {
+export class TransactionUpdateRequestCart extends SpeakeasyBase {
     /**
      * A shopper-facing identifier corresponding to the order reference associated with this transaction.
      */
@@ -14,16 +14,16 @@ export class TransactionUpdateRequestOrderCart extends SpeakeasyBase {
     displayId?: string;
 }
 
-export class TransactionUpdateRequestOrder extends SpeakeasyBase {
+export class Order extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "cart" })
-    @Type(() => TransactionUpdateRequestOrderCart)
-    cart?: TransactionUpdateRequestOrderCart;
+    @Type(() => TransactionUpdateRequestCart)
+    cart?: TransactionUpdateRequestCart;
 }
 
 export class TransactionUpdateRequest extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "order" })
-    @Type(() => TransactionUpdateRequestOrder)
-    order?: TransactionUpdateRequestOrder;
+    @Type(() => Order)
+    order?: Order;
 }
