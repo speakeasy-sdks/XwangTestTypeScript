@@ -74,7 +74,7 @@ import { CountryCode } from "XwangTestTypeScript/dist/sdk/models/shared";
 ## Available Resources and Operations
 
 
-### [.account](docs/sdks/account/README.md)
+### [account](docs/sdks/account/README.md)
 
 * [addAddress](docs/sdks/account/README.md#addaddress) - Add an address
 * [addPaymentMethod](docs/sdks/account/README.md#addpaymentmethod) - Add a payment method to a shopper's Bolt account Wallet.
@@ -85,24 +85,24 @@ import { CountryCode } from "XwangTestTypeScript/dist/sdk/models/shared";
 * [updateAddress](docs/sdks/account/README.md#updateaddress) - Edit an existing address
 
 
-### [.payments.guest](docs/sdks/guest/README.md)
+### [payments.guest](docs/sdks/guest/README.md)
 
 * [initialize](docs/sdks/guest/README.md#initialize) - Initialize a Bolt payment for guest shoppers
 * [performAction](docs/sdks/guest/README.md#performaction) - Perform an irreversible action (e.g. finalize) on a pending guest payment
 * [update](docs/sdks/guest/README.md#update) - Update an existing guest payment
 
-### [.payments.loggedIn](docs/sdks/loggedin/README.md)
+### [payments.loggedIn](docs/sdks/loggedin/README.md)
 
 * [initialize](docs/sdks/loggedin/README.md#initialize) - Initialize a Bolt payment for logged in shoppers
 * [performAction](docs/sdks/loggedin/README.md#performaction) - Perform an irreversible action (e.g. finalize) on a pending payment
 * [update](docs/sdks/loggedin/README.md#update) - Update an existing payment
 
-### [.testing](docs/sdks/testing/README.md)
+### [testing](docs/sdks/testing/README.md)
 
 * [createAccount](docs/sdks/testing/README.md#createaccount) - Create a test account
 * [getCreditCard](docs/sdks/testing/README.md#getcreditcard) - Retrieve a test credit card, including its token
 
-### [.transactions](docs/sdks/transactions/README.md)
+### [transactions](docs/sdks/transactions/README.md)
 
 * [getDetails](docs/sdks/transactions/README.md#getdetails) - Retrieve transaction details
 * [performAction](docs/sdks/transactions/README.md#performaction) - Perform an irreversible action (e.g. capture, refund, void) on a transaction
@@ -116,7 +116,12 @@ import { CountryCode } from "XwangTestTypeScript/dist/sdk/models/shared";
 <!-- Start Error Handling -->
 # Error Handling
 
-Handling errors in your SDK should largely match your expectations.  All operations return a response object or throw an error.  If Error objects are specified in your OpenAPI Spec, the SDK will throw the appropriate Error type.
+Handling errors in this SDK should largely match your expectations.  All operations return a response object or throw an error.  If Error objects are specified in your OpenAPI Spec, the SDK will throw the appropriate Error type.
+
+| Error Object     | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| errors.ErrorT    | 4XX              | application/json |
+| errors.SDKError  | 400-600          | */*              |
 
 
 ## Example
@@ -140,11 +145,10 @@ import { TestBolt } from "XwangTestTypeScript";
     id: "D4g3h5tBuVYK9",
   });
   } catch (e) { 
-    if (e instanceof error) {
+    if (e instanceof errors.ErrorT) {
       console.error(e) // handle exception 
     
   }
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -276,12 +280,11 @@ const sdk = new TestBolt({defaultClient: httpClient});
 
 
 <!-- Start Authentication -->
-
 # Authentication
 
 ## Per-Client Security Schemes
 
-Your SDK supports the following security schemes globally:
+This SDK supports the following security schemes globally:
 
 | Name         | Type         | Scheme       |
 | ------------ | ------------ | ------------ |
@@ -329,7 +332,7 @@ import { CountryCode } from "XwangTestTypeScript/dist/sdk/models/shared";
 
 ## Per-Operation Security Schemes
 
-Some operations in your SDK require the security scheme to be specified at the request level. For example:
+Some operations in this SDK require the security scheme to be specified at the request level. For example:
 
 ```typescript
 import { TestBolt } from "XwangTestTypeScript";
