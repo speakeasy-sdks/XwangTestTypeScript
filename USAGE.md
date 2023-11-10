@@ -1,6 +1,4 @@
 <!-- Start SDK Example Usage -->
-
-
 ```typescript
 import { TestBolt } from "XwangTestTypeScript";
 import { CountryCode } from "XwangTestTypeScript/dist/sdk/models/shared";

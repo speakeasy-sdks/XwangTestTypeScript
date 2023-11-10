@@ -2,15 +2,17 @@ configVersion: 1.0.0
 management:
   docChecksum: d42747a5bd3aa0553492d9e771307e46
   docVersion: 3.0.1
-  speakeasyVersion: 1.116.0
-  generationVersion: 2.185.0
+  speakeasyVersion: 1.118.3
+  generationVersion: 2.187.7
 generation:
   comments: {}
   sdkClassName: TestBolt
   repoURL: https://github.com/speakeasy-sdks/XwangTestTypeScript.git
+  usageSnippets:
+    optionalPropertyRendering: withExample
 features:
   typescript:
-    core: 3.1.2
+    core: 3.1.3
     globalSecurity: 2.82.0
     globalServerURLs: 2.82.0
     groups: 2.81.2
@@ -18,7 +20,7 @@ features:
     methodSecurity: 2.82.0
     nameOverrides: 2.81.1
 typescript:
-  version: 0.3.0
+  version: 0.3.1
   author: Steve-Test
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true
