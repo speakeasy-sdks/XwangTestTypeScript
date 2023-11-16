@@ -7,7 +7,7 @@ management:
 generation:
   comments: {}
   sdkClassName: TestBolt
-  repoURL: https://github.com/speakeasy-sdks/XwangTestTypeScript.git
+  repoURL: https://github.com/speakeasy-sdks/Test_Bolt_API.git
   usageSnippets:
     optionalPropertyRendering: withExample
 features:
