@@ -2,8 +2,8 @@ configVersion: 1.0.0
 management:
   docChecksum: d42747a5bd3aa0553492d9e771307e46
   docVersion: 3.0.1
-  speakeasyVersion: 1.118.3
-  generationVersion: 2.187.7
+  speakeasyVersion: 1.120.3
+  generationVersion: 2.192.1
 generation:
   comments: {}
   sdkClassName: TestBolt
@@ -12,7 +12,7 @@ generation:
     optionalPropertyRendering: withExample
 features:
   typescript:
-    core: 3.1.3
+    core: 3.1.4
     globalSecurity: 2.82.0
     globalServerURLs: 2.82.0
     groups: 2.81.2
@@ -20,7 +20,7 @@ features:
     methodSecurity: 2.82.0
     nameOverrides: 2.81.1
 typescript:
-  version: 0.3.1
+  version: 0.3.2
   author: Steve-Test
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true
