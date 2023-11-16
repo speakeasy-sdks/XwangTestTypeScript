@@ -17,7 +17,7 @@ Bolt when it is updated or finalized for logged in shoppers.
 
 ```typescript
 import { TestBolt } from "XwangTestTypeScript";
-import { Currency, PaymentMethodReferenceTag } from "XwangTestTypeScript/dist/sdk/models/shared";
+import { Currency } from "XwangTestTypeScript/dist/sdk/models/shared";
 
 (async() => {
   const sdk = new TestBolt({
@@ -77,10 +77,7 @@ import { Currency, PaymentMethodReferenceTag } from "XwangTestTypeScript/dist/sd
           units: 900,
         },
       },
-      paymentMethod: {
-        dotTag: PaymentMethodReferenceTag.Id,
-        id: "id",
-      },
+      paymentMethod: "string",
     },
   });
 

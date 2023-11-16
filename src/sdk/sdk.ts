@@ -5,9 +5,9 @@
 import * as utils from "../internal/utils";
 import * as shared from "../sdk/models/shared";
 import { Account } from "./account";
+import { OAuth } from "./oauth";
 import { Payments } from "./payments";
 import { Testing } from "./testing";
-import { Transactions } from "./transactions";
 import axios from "axios";
 import { AxiosInstance } from "axios";
 
@@ -62,9 +62,9 @@ export class SDKConfiguration {
     serverDefaults: any;
     language = "typescript";
     openapiDocVersion = "3.0.1";
-    sdkVersion = "0.3.2";
+    sdkVersion = "0.3.3";
     genVersion = "2.192.1";
-    userAgent = "speakeasy-sdk/typescript 0.3.2 2.192.1 3.0.1 XwangTestTypeScript";
+    userAgent = "speakeasy-sdk/typescript 0.3.3 2.192.1 3.0.1 XwangTestTypeScript";
     retryConfig?: utils.RetryConfig;
     public constructor(init?: Partial<SDKConfiguration>) {
         Object.assign(this, init);
@@ -85,6 +85,16 @@ export class TestBolt {
     public account: Account;
     public payments: Payments;
     /**
+     * Use this endpoint to retrieve an OAuth token. Use the token to allow your ecommerce server to make calls to the Account
+     *
+     * @remarks
+     * endpoint and create a one-click checkout experience for shoppers.
+     *
+     *
+     * @see {@link https://help.bolt.com/products/accounts/direct-api/oauth-guide/}
+     */
+    public oAuth: OAuth;
+    /**
      * Endpoints that allow you to generate and retrieve test data to verify certain
      *
      * @remarks
@@ -92,15 +102,6 @@ export class TestBolt {
      *
      */
     public testing: Testing;
-    /**
-     * Transaction endpoints allow you to manage transactions. For example, you can capture
-     *
-     * @remarks
-     * funds, void transactions, or issue refunds. You can also update certain fields for existing
-     * transactions.
-     *
-     */
-    public transactions: Transactions;
 
     private sdkConfiguration: SDKConfiguration;
 
@@ -131,7 +132,7 @@ export class TestBolt {
 
         this.account = new Account(this.sdkConfiguration);
         this.payments = new Payments(this.sdkConfiguration);
+        this.oAuth = new OAuth(this.sdkConfiguration);
         this.testing = new Testing(this.sdkConfiguration);
-        this.transactions = new Transactions(this.sdkConfiguration);
     }
 }

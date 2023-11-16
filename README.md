@@ -99,16 +99,14 @@ import { CountryCode } from "XwangTestTypeScript/dist/sdk/models/shared";
 * [performAction](docs/sdks/loggedin/README.md#performaction) - Perform an irreversible action (e.g. finalize) on a pending payment
 * [update](docs/sdks/loggedin/README.md#update) - Update an existing payment
 
+### [oAuth](docs/sdks/oauth/README.md)
+
+* [getToken](docs/sdks/oauth/README.md#gettoken) - Get OAuth token
+
 ### [testing](docs/sdks/testing/README.md)
 
 * [createAccount](docs/sdks/testing/README.md#createaccount) - Create a test account
 * [getCreditCard](docs/sdks/testing/README.md#getcreditcard) - Retrieve a test credit card, including its token
-
-### [transactions](docs/sdks/transactions/README.md)
-
-* [getDetails](docs/sdks/transactions/README.md#getdetails) - Retrieve transaction details
-* [performAction](docs/sdks/transactions/README.md#performaction) - Perform an irreversible action (e.g. capture, refund, void) on a transaction
-* [update](docs/sdks/transactions/README.md#update) - Update certain transaction details
 <!-- End SDK Available Operations -->
 
 <!-- Start Dev Containers -->

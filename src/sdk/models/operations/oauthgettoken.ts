@@ -6,12 +6,7 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
-export class TestingCreditCardGetSecurity extends SpeakeasyBase {
-    @SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header;name=X-API-Key" })
-    apiKey: string;
-}
-
-export class TestingCreditCardGetResponse extends SpeakeasyBase {
+export class OauthGetTokenResponse extends SpeakeasyBase {
     /**
      * HTTP response content type for this operation
      */
@@ -31,8 +26,8 @@ export class TestingCreditCardGetResponse extends SpeakeasyBase {
     rawResponse: AxiosResponse;
 
     /**
-     * Successfully generated test credit card details
+     * Access token is successfully fetched
      */
     @SpeakeasyMetadata()
-    testCreditCard?: shared.TestCreditCard;
+    getAccessTokenResponse?: shared.GetAccessTokenResponse;
 }
