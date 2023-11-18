@@ -120,7 +120,7 @@ Perform an irreversible action on a pending guest payment, such as finalizing it
 ```typescript
 import { TestBolt } from "XwangTestTypeScript";
 import { GuestPaymentsActionSecurity } from "XwangTestTypeScript/dist/sdk/models/operations";
-import { PaymentActionRequestTag } from "XwangTestTypeScript/dist/sdk/models/shared";
+import { DotTag } from "XwangTestTypeScript/dist/sdk/models/shared";
 
 (async() => {
   const sdk = new TestBolt();
@@ -130,7 +130,7 @@ const operationSecurity: GuestPaymentsActionSecurity = "";
     xPublishableKey: "string",
     id: "iKv7t5bgt1gg",
     paymentActionRequest: {
-      dotTag: PaymentActionRequestTag.Finalize,
+      dotTag: DotTag.Finalize,
     },
   }, operationSecurity);
 

@@ -114,7 +114,7 @@ Perform an irreversible action on a pending payment, such as finalizing it.
 
 ```typescript
 import { TestBolt } from "XwangTestTypeScript";
-import { PaymentActionRequestTag } from "XwangTestTypeScript/dist/sdk/models/shared";
+import { DotTag } from "XwangTestTypeScript/dist/sdk/models/shared";
 
 (async() => {
   const sdk = new TestBolt({
@@ -128,7 +128,7 @@ import { PaymentActionRequestTag } from "XwangTestTypeScript/dist/sdk/models/sha
     xPublishableKey: "string",
     id: "iKv7t5bgt1gg",
     paymentActionRequest: {
-      dotTag: PaymentActionRequestTag.Finalize,
+      dotTag: DotTag.Finalize,
     },
   });
 
