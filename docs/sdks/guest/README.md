@@ -20,9 +20,9 @@ import { TestBolt } from "XwangTestTypeScript";
 import { GuestPaymentsInitializeSecurity } from "XwangTestTypeScript/dist/sdk/models/operations";
 import { Currency } from "XwangTestTypeScript/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new TestBolt();
-const operationSecurity: GuestPaymentsInitializeSecurity = "";
+const operationSecurity: GuestPaymentsInitializeSecurity = "<YOUR_API_KEY_HERE>";
 
   const res = await sdk.payments.guest.initialize({
     xPublishableKey: "string",
@@ -88,7 +88,9 @@ const operationSecurity: GuestPaymentsInitializeSecurity = "";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -122,9 +124,9 @@ import { TestBolt } from "XwangTestTypeScript";
 import { GuestPaymentsActionSecurity } from "XwangTestTypeScript/dist/sdk/models/operations";
 import { DotTag } from "XwangTestTypeScript/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new TestBolt();
-const operationSecurity: GuestPaymentsActionSecurity = "";
+const operationSecurity: GuestPaymentsActionSecurity = "<YOUR_API_KEY_HERE>";
 
   const res = await sdk.payments.guest.performAction({
     xPublishableKey: "string",
@@ -137,7 +139,9 @@ const operationSecurity: GuestPaymentsActionSecurity = "";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -171,9 +175,9 @@ import { TestBolt } from "XwangTestTypeScript";
 import { GuestPaymentsUpdateSecurity } from "XwangTestTypeScript/dist/sdk/models/operations";
 import { Currency } from "XwangTestTypeScript/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new TestBolt();
-const operationSecurity: GuestPaymentsUpdateSecurity = "";
+const operationSecurity: GuestPaymentsUpdateSecurity = "<YOUR_API_KEY_HERE>";
 
   const res = await sdk.payments.guest.update({
     xPublishableKey: "string",
@@ -232,7 +236,9 @@ const operationSecurity: GuestPaymentsUpdateSecurity = "";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

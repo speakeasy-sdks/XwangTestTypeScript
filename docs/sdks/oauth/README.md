@@ -22,11 +22,10 @@ Retrieve a new or refresh an existing OAuth token.
 import { TestBolt } from "XwangTestTypeScript";
 import { GrantType, Scope } from "XwangTestTypeScript/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new TestBolt({
     security: {
-      apiKey: "",
-      oauth: "",
+      apiKey: "<YOUR_API_KEY_HERE>",
     },
   });
 
@@ -43,7 +42,9 @@ import { GrantType, Scope } from "XwangTestTypeScript/dist/sdk/models/shared";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
