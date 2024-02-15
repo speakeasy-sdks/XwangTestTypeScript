@@ -25,7 +25,7 @@ async function run() {
 const operationSecurity: GuestPaymentsInitializeSecurity = "<YOUR_API_KEY_HERE>";
 
   const res = await sdk.payments.guest.initialize({
-    xPublishableKey: "string",
+    xPublishableKey: "<value>",
     guestPaymentInitializeRequest: {
       cart: {
         discounts: [
@@ -57,7 +57,7 @@ const operationSecurity: GuestPaymentsInitializeSecurity = "<YOUR_API_KEY_HERE>"
         orderReference: "order_100",
         shipments: [
           {
-            address: "string",
+            address: "<value>",
             carrier: "FedEx",
             cost: {
               currency: Currency.Usd,
@@ -74,7 +74,7 @@ const operationSecurity: GuestPaymentsInitializeSecurity = "<YOUR_API_KEY_HERE>"
           units: 900,
         },
       },
-      paymentMethod: "string",
+      paymentMethod: "<value>",
       profile: {
         createAccount: true,
         email: "alice@example.com",
@@ -129,7 +129,7 @@ async function run() {
 const operationSecurity: GuestPaymentsActionSecurity = "<YOUR_API_KEY_HERE>";
 
   const res = await sdk.payments.guest.performAction({
-    xPublishableKey: "string",
+    xPublishableKey: "<value>",
     id: "iKv7t5bgt1gg",
     paymentActionRequest: {
       dotTag: DotTag.Finalize,
@@ -180,7 +180,7 @@ async function run() {
 const operationSecurity: GuestPaymentsUpdateSecurity = "<YOUR_API_KEY_HERE>";
 
   const res = await sdk.payments.guest.update({
-    xPublishableKey: "string",
+    xPublishableKey: "<value>",
     id: "iKv7t5bgt1gg",
     paymentUpdateRequest: {
       cart: {
@@ -213,7 +213,7 @@ const operationSecurity: GuestPaymentsUpdateSecurity = "<YOUR_API_KEY_HERE>";
         orderReference: "order_100",
         shipments: [
           {
-            address: "string",
+            address: "<value>",
             carrier: "FedEx",
             cost: {
               currency: Currency.Usd,

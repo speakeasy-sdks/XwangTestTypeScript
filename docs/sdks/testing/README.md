@@ -29,7 +29,7 @@ async function run() {
 const operationSecurity: TestingAccountCreateSecurity = "<YOUR_API_KEY_HERE>";
 
   const res = await sdk.testing.createAccount({
-    xPublishableKey: "string",
+    xPublishableKey: "<value>",
     accountTestCreationData: {
       emailState: EmailState.Unverified,
       hasAddress: true,
