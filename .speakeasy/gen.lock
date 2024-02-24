@@ -4,16 +4,16 @@ management:
   docChecksum: 4ffd4942026558444f933f9c092631c9
   docVersion: 3.0.1
   speakeasyVersion: internal
-  generationVersion: 2.258.2
-  releaseVersion: 0.5.2
-  configChecksum: 59fb676467b5c75b44e7de4146feaab9
+  generationVersion: 2.272.4
+  releaseVersion: 0.5.3
+  configChecksum: 0c6723c0fbd0a2692e876f61472dd8af
   repoURL: https://github.com/speakeasy-sdks/XwangTestTypeScript.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/XwangTestTypeScript
 features:
   typescript:
-    core: 3.4.7
-    globalSecurity: 2.82.2
+    core: 3.4.8
+    globalSecurity: 2.82.3
     globalServerURLs: 2.82.1
     groups: 2.81.2
     ignores: 2.81.1

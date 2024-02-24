@@ -236,11 +236,7 @@ import { TestBolt } from "XwangTestTypeScript";
 import { IdentifierType } from "XwangTestTypeScript/dist/sdk/models/shared";
 
 async function run() {
-  const sdk = new TestBolt({
-    security: {
-      apiKey: "<YOUR_API_KEY_HERE>",
-    },
-  });
+  const sdk = new TestBolt();
 
   const res = await sdk.account.detect({
     xPublishableKey: "<value>",
