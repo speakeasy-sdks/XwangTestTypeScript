@@ -1,6 +1,6 @@
 {
   "name": "XwangTestTypeScript",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "author": "Steve-Test",
   "scripts": {
     "prepare": "tsc --build",
